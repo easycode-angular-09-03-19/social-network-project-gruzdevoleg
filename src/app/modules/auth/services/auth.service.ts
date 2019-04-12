@@ -5,6 +5,7 @@ import { map } from "rxjs/operators";
 import { Observable } from "rxjs";
 import { LoginServerAnswer } from "../interfaces/LoginServerAnswer";
 import { ResetPasswordServerAnswer } from "../interfaces/ResetPasswordServerAnswer";
+import { SignupServerAnswer } from "../interfaces/SignupServerAnswer";
 
 @Injectable()
 export class AuthService {
@@ -32,5 +33,9 @@ export class AuthService {
 
   resetPassword(email): Observable<ResetPasswordServerAnswer> {
     return this.http.post<ResetPasswordServerAnswer>(`${this.apiUrl}/public/auth/reset-password`, email);
+  }
+
+  signup(newUserData): Observable<SignupServerAnswer> {
+    return this.http.post<SignupServerAnswer>(`${this.apiUrl}/public/auth/signup`, newUserData);
   }
 }

@@ -27,15 +27,12 @@ export class ResetPasswordModalComponent implements OnInit {
 	}
 
 	onSubmit() {
-		//запрос на сброс пароля (дернуть метод сброса пароля из сервиса auth)
+		
 		this.authService.resetPassword({ email: this.resetPasswordForm.value.email }).subscribe((data: ResetPasswordServerAnswer) => {
 			console.log(data);
 			if (!data.error) {
 				this.closeModal();
 			}
-			
 		})
-		//если все ок, вызвать метод closeModal, чтобы закрыть окно
 	}
-
 }

@@ -11,13 +11,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { ResetPasswordModalComponent } from './components/reset-password-modal/reset-password-modal.component';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     LoginFormComponent,
     SignupComponent,
-    ResetPasswordModalComponent
+    ResetPasswordModalComponent,
+    SignupFormComponent
   ],
   imports: [
     CommonModule,

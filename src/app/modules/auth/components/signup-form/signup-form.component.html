@@ -1,0 +1,157 @@
+<form
+    [formGroup]="signUpForm"
+    (ngSubmit)="onSubmit()"
+  >
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+        >
+        <mat-error *ngIf="signUpForm.get('email').hasError('email')">
+          Email is invalid
+        </mat-error>
+        <mat-error *ngIf="signUpForm.get('email').hasError('required')">
+          Email is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('password').hasError('required')">
+          Password is required
+        </mat-error>
+        <mat-error *ngIf="signUpForm.get('password').hasError('minlength')">
+          Password must be at least 8 characters
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Nickname"
+          formControlName="nickName"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('nickName').hasError('required')">
+          Nickname is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="First Name"
+          formControlName="first_name"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('first_name').hasError('required')">
+          First name is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Last Name"
+          formControlName="last_name"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('last_name').hasError('required')">
+          Last name is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Phone"
+          formControlName="phone"
+        >
+
+        <mat-error *ngIf="signUpForm.get('phone').hasError('required')">
+          Phone is required
+        </mat-error>
+    </mat-form-field>
+   
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Gender orientation"
+          formControlName="gender_orientation"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('gender_orientation').hasError('required')">
+          Gender orientation is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="City"
+          formControlName="city"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('city').hasError('required')">
+          City is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Country"
+          formControlName="country"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('country').hasError('required')">
+          Country is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Date of birthday (day)"
+          formControlName="date_of_birth_day"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('date_of_birth_day').hasError('required')">
+          Date of birthday is required
+        </mat-error>
+    </mat-form-field>
+
+     <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Date of birthday (month)"
+          formControlName="date_of_birth_month"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('date_of_birth_month').hasError('required')">
+          Date of birthday is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Date of birthday (year)"
+          formControlName="date_of_birth_year"
+        >
+        
+        <mat-error *ngIf="signUpForm.get('date_of_birth_year').hasError('required')">
+          Date of birthday is required
+        </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="submit-btn">Sign Up</button>
+</form>

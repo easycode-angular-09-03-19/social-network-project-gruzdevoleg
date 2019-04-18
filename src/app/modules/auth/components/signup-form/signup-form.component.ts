@@ -14,8 +14,8 @@ export class SignupFormComponent implements OnInit {
 
  	constructor(
  		private authService: AuthService,
-    	private router: Router
- 		) { }
+    private router: Router
+ 	) { }
 
 	ngOnInit() {
     this.signUpForm = new FormGroup({
@@ -35,6 +35,9 @@ export class SignupFormComponent implements OnInit {
   }
 
 	onSubmit() {
+    if (this.signUpForm.invalid) {
+      return console.log('Validate errors');
+    }
 		this.authService.signup({...this.signUpForm.value}).subscribe((res: SignupServerAnswer) => {
 			if (!res.error) {
         this.router.navigate(['/auth/login']);

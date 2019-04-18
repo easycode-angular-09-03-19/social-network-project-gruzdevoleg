@@ -1,0 +1,11 @@
+<div *ngIf="notifications_list.length > 0; then listBlock else emptyBlock"></div>
+
+<ng-template #listBlock>
+	<ul>
+		<li *ngFor="let item of notifications_list">{{ item }}</li>
+	</ul>
+</ng-template>
+
+<ng-template #emptyBlock>
+  You don't have notifications yet
+</ng-template>

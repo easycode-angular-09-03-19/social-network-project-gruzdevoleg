@@ -36,7 +36,6 @@ export class NavbarComponent implements OnInit {
           this.notifications = data;
         }
       }, (err) => {
-        console.log(err);
         this.messageService.add({
           severity: 'error',
           summary: 'Notifications load error',

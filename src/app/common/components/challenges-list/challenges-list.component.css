@@ -1,0 +1,8 @@
+.callenges-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.challenge-card {
+	margin-right: 20px;
+}

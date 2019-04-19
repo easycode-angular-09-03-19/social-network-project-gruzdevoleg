@@ -1,3 +1,11 @@
-<p>
-  challenge-card works!
-</p>
+
+	<div class="challenge-card--inner" [ngStyle]="{background: 'url(' + challenge?.background + ')' + 'center/cover no-repeat'}">
+		
+	</div>
+	<div class="challenge-card--footer">
+		<span class="challenge-name">{{ challenge.name }}</span>
+		<span class="challenge-date--start">{{ challenge.start_date }}</span>
+		<span class="challenge-date--end">{{ challenge.end_date }}</span>
+	</div>
+	
+

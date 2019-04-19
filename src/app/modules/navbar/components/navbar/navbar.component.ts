@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { NavbarService } from "../../../services/navbar.service";
+import { NavbarService } from "../../services/navbar.service";
 import { MessageService } from 'primeng/api';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 @Component({

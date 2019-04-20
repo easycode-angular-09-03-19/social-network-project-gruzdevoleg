@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {HomeService} from '../../services/home.service';
 import {zip} from 'rxjs';
 import { MessageService } from 'primeng/api';
+import { Challenge } from "../../../../interfaces/Challenge";
+import { HomePageData } from "../../../../interfaces/HomePageData";
 
 @Component({
   selector: 'app-home-page',
@@ -9,8 +11,9 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit {
-  homePageData;
-  challenges;
+  homePageData: HomePageData;
+  challenges: Challenge[];
+  
   constructor(
     private homeService: HomeService,
     private messageService: MessageService
@@ -21,11 +24,10 @@ export class HomePageComponent implements OnInit {
       this.homeService.getHomePage(),
       this.homeService.getActiveChallenges()
     )
-      .subscribe(([homePageData, { challenges }]: any) => {
+      .subscribe(([homePageData, { challenges }]: [HomePageData, Challenge[]]) => {
         this.homePageData = homePageData;
         this.challenges = challenges;
-        console.log(homePageData);
-        console.log(challenges);
+        return;
       }, (err) => {
         this.messageService.add({
           severity: 'error',

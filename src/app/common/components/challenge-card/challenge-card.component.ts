@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Challenge } from "../../../interfaces/Challenge";
 
 @Component({
   selector: 'app-challenge-card',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./challenge-card.component.css']
 })
 export class ChallengeCardComponent implements OnInit {
-	@Input() challenge;
+	@Input() challenge: Challenge;
 
   constructor() { }
 

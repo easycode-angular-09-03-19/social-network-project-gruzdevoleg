@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from "@env/environment";
 import { Observable } from 'rxjs';
+import { Challenge } from "../../../interfaces/Challenge";
+import { HomePageData } from "../../../interfaces/HomePageData";
 
 @Injectable()
 export class HomeService {
@@ -11,11 +13,11 @@ export class HomeService {
   	private http: HttpClient,
   	) { }
 
-  getHomePage(): Observable<object> {
-  	return this.http.get(`${this.apiUrl}/public/home`);
+  getHomePage(): Observable<HomePageData> {
+  	return this.http.get<HomePageData>(`${this.apiUrl}/public/home`);
   }
 
-  getActiveChallenges(): Observable<object[]> {
+  getActiveChallenges(): Observable<Challenge[]> {
   	let params = new HttpParams();
   	params = params.append('isActive', '0');
   	params = params.append('isClosed', '1');
@@ -23,6 +25,6 @@ export class HomeService {
   	const httpOptions = {
   		params
   	};
-  	return this.http.get<object[]>(`${this.apiUrl}/public/challenges/list`, httpOptions);
+  	return this.http.get<Challenge[]>(`${this.apiUrl}/public/challenges/list`, httpOptions);
   }
 }

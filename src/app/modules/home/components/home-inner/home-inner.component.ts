@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { HomePageData } from "../../../../interfaces/HomePageData";
 
 @Component({
   selector: 'app-home-inner',
@@ -7,7 +8,7 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./home-inner.component.css']
 })
 export class HomeInnerComponent implements OnInit {
-  @Input() data;
+  @Input() data: HomePageData;
   constructor(
     private messageService: MessageService
   ) { }

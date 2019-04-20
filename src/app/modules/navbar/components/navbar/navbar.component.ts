@@ -4,6 +4,7 @@ import { filter } from 'rxjs/operators';
 import { NavbarService } from "../../services/navbar.service";
 import { MessageService } from 'primeng/api';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +12,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 })
 export class NavbarComponent implements OnInit {
 	isHidden = true;
-  notifications = [];
+  	notifications = [];
 
   constructor(
   	private activatedRoute: ActivatedRoute,

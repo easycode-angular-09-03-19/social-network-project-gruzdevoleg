@@ -3,4 +3,5 @@ export interface HomePageData {
   countries: string;
   cities: string;
   regions: string;
+  innerText?: string
 }

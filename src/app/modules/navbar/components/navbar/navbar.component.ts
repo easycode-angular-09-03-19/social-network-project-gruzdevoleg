@@ -12,7 +12,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 })
 export class NavbarComponent implements OnInit {
 	isHidden = true;
-  	notifications = [];
+  	notifications: string[] = [];
 
   constructor(
   	private activatedRoute: ActivatedRoute,
@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
     		 		});
       	});
 
-    this.navbarService.getNotifications().subscribe((data: []) => {
+    this.navbarService.getNotifications().subscribe((data: string[]) => {
 
         if(data) {
           this.notifications = data;

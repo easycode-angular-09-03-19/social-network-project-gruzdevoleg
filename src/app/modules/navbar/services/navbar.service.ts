@@ -15,10 +15,10 @@ export class NavbarService {
 
 	  	) { }
 
-	getNotifications(): Observable<object> {
+	getNotifications(): Observable<string[]> {
 		const headers = new HttpHeaders({"x-access-token": localStorage.getItem('sn_app_token')});
 		console.log(localStorage.getItem('sn_app_token'));
-		return this.http.get(`${this.apiUrl}/public/users/notification`, { headers });
+		return this.http.get<string[]>(`${this.apiUrl}/public/users/notification`, { headers });
 	}
 }
 

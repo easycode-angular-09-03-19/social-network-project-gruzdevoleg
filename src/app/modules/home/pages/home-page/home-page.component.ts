@@ -12,13 +12,13 @@ import { HomePageData } from "../../../../interfaces/HomePageData";
 })
 export class HomePageComponent implements OnInit {
   homePageData: HomePageData;
-  challenges: Challenge[];
+  challenges: Challenge[]
   
   constructor(
     private homeService: HomeService,
     private messageService: MessageService
   ) { }
-
+  
   ngOnInit() {
     zip(
       this.homeService.getHomePage(),
@@ -27,7 +27,6 @@ export class HomePageComponent implements OnInit {
       .subscribe(([homePageData, { challenges }]: [HomePageData, Challenge[]]) => {
         this.homePageData = homePageData;
         this.challenges = challenges;
-        return;
       }, (err) => {
         this.messageService.add({
           severity: 'error',

@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit {
     private homeService: HomeService,
     private messageService: MessageService
   ) { }
-  
+   
   ngOnInit() {
     zip(
       this.homeService.getHomePage(),

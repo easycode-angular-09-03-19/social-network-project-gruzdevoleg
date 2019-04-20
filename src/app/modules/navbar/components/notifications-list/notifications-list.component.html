@@ -2,7 +2,9 @@
 
 <ng-template #listBlock>
 	<ul>
-		<li *ngFor="let item of notifications_list">{{ item }}</li>
+		<li *ngFor="let item of notifications_list">
+			<app-notification-item  [notification_item]="item"></app-notification-item>
+		</li>
 	</ul>
 </ng-template>
 

@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Notification } from '../../../../interfaces/Notification';
+import { NavbarService } from "../../services/navbar.service";
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-notifications-list',
@@ -7,11 +10,26 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class NotificationsListComponent implements OnInit {
-	@Input() notifications_list;
 
-	constructor() { }
+	notifications_list: Notification[];
+	
+	constructor(
+		private navbarService: NavbarService,
+		private messageService: MessageService
+		) { }
 
 	ngOnInit() {
+		this.navbarService.getNotifications().subscribe((data: Notification[]) => {
+		console.log(data);
+        if(data) {
+          this.notifications_list = data;
+        }
+      }, (err) => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Notifications load error',
+          detail: err.error.message,
+        });
+      });
 	}
-
 }

@@ -12,7 +12,7 @@ import { HomePageData } from "../../../../interfaces/HomePageData";
 })
 export class HomePageComponent implements OnInit {
   homePageData: HomePageData;
-  challenges: Challenge[]
+  challenges: Challenge[] = [];
   
   constructor(
     private homeService: HomeService,

@@ -21,9 +21,10 @@ export class NotificationsListComponent implements OnInit {
 	ngOnInit() {
 		this.navbarService.getNotifications().subscribe((data: Notification[]) => {
 		console.log(data);
-        if(data) {
-          this.notifications_list = data;
-        }
+    this.notifications_list = data;
+        // if(data) {
+        //   this.notifications_list = data;
+        // }
       }, (err) => {
         this.messageService.add({
           severity: 'error',

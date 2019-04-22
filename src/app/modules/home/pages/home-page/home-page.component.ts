@@ -24,7 +24,7 @@ export class HomePageComponent implements OnInit {
       this.homeService.getHomePage(),
       this.homeService.getActiveChallenges()
     )
-      .subscribe(([homePageData, { challenges }]: [HomePageData, Challenge[]]) => {
+      .subscribe(([homePageData, { challenges }]: [HomePageData, Challenge[]]): any => {
         this.homePageData = homePageData;
         this.challenges = challenges;
       }, (err) => {

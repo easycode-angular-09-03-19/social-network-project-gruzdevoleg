@@ -13,7 +13,6 @@ export class NavbarService {
 	
   	constructor(
 	  	private http: HttpClient,
-
 	  	) { }
 
 	getNotifications(): Observable<Notification[]> {

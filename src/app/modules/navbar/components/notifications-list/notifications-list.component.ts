@@ -20,12 +20,8 @@ export class NotificationsListComponent implements OnInit {
 
 	ngOnInit() {
 		this.navbarService.getNotifications().subscribe((data: Notification[]) => {
-		console.log(data);
-    this.notifications_list = data;
-        // if(data) {
-        //   this.notifications_list = data;
-        // }
-      }, (err) => {
+		   this.notifications_list = data;
+        }, (err) => {
         this.messageService.add({
           severity: 'error',
           summary: 'Notifications load error',

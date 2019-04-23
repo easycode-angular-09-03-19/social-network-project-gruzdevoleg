@@ -1,0 +1,24 @@
+<mat-toolbar class="header" *ngIf="!isHidden">
+	<div class="container">
+		<div class="logo">
+			<a href="#">My App</a>
+		</div>
+		<nav class="nav">
+			<ul class="nav__menu">
+				<li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+				<li class="nav__item"><a class="nav__link" href="#">Challenges</a></li>
+				<li class="nav__item"><a class="nav__link" href="#">Winners</a></li>
+				<li class="nav__item"><a class="nav__link" href="#">News feed</a></li>
+			</ul>
+		</nav>
+
+		<div class="header-row--right">
+			<button id="show-notify" pButton (click)="op.toggle($event)"><i class="far fa-bell"></i></button>
+		</div>
+	</div>
+</mat-toolbar>
+
+<p-overlayPanel #op hideEffect="fade" for="show-notify" my="right bottom">
+	<app-notifications-list></app-notifications-list>
+</p-overlayPanel>
+

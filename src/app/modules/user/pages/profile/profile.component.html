@@ -1,0 +1,30 @@
+<app-profile-cover
+ [cover]="user?.cover" 
+ [isCurrentUser]="authUserId === id"
+ (upload)="uploadCover($event)"
+ ></app-profile-cover>
+
+ <section class="profile-content">
+ 	<div class="profile-content__header">
+ 		<div class="container">
+ 			<div class="profile-content__header--inner">
+ 				<app-profile-controls
+ 			    [user]="user"
+			 	></app-profile-controls>
+				
+ 			</div>
+ 		</div>
+ 	</div>
+
+ 	<div class="profile-content__inner">
+    <div class="container">
+   		<app-profile-tabs-container
+  		 [activeTab]="activeTab"
+  	 	>
+  	  </app-profile-tabs-container>
+      </div>
+ 	</div>
+
+ </section>
+
+ 

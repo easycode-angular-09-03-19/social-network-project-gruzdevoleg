@@ -1,0 +1,18 @@
+.profile-content {
+	background-color: lightgray;
+}
+
+.profile-content__header {
+	min-height: 80px;
+	height: 1px;
+	background-color: lightgray;
+}
+
+.profile-content__header .container{
+	height: 100%;
+}
+
+.profile-content__inner {
+	background: #fff;
+	padding-top: 50px;
+}

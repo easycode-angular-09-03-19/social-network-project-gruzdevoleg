@@ -1,4 +1,4 @@
-<div *ngIf="notifications_list.length > 0; then listBlock else emptyBlock"></div>
+<div *ngIf="notifications_list; then listBlock else emptyBlock"></div>
 
 <ng-template #listBlock>
 	<ul>

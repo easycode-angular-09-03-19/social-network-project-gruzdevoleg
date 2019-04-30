@@ -1,0 +1,27 @@
+.profile-cover {
+	height: 400px;
+	background-color: lightgray;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+.profile-cover .container {
+	height: 100%;
+}
+
+.profile-cover__inner {
+	height: 100%;
+	position: relative;
+}
+
+
+.upload-cover {
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	width: 120px;
+	/*height: 40px;*/
+	background-color: rgba(0,0,0,.5);
+	line-height: 40px;
+}

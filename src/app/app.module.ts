@@ -10,10 +10,14 @@ import { ToastModule } from 'primeng/toast';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 
 
+
+
 @NgModule({
   //здесь регистрируем компоненты, которые будут в данном модуле
   declarations: [
     AppComponent,
+    
+    
          
   ],
 

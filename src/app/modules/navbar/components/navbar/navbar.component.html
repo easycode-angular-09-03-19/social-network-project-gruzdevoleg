@@ -14,8 +14,12 @@
 
 		<div class="header-row--right">
 			<button id="show-notify" pButton (click)="op.toggle($event)"><i class="far fa-bell"></i></button>
+			<a href="" *ngIf="userId" [routerLink]="['/users/', userId]">User profile</a>
 		</div>
+
 	</div>
+	
+
 </mat-toolbar>
 
 <p-overlayPanel #op hideEffect="fade" for="show-notify" my="right bottom">

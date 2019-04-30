@@ -1,0 +1,9 @@
+.img__item {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+
+.img__item img {
+	width: 100%;
+}

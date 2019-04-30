@@ -1,0 +1,29 @@
+<div class="profile-controls">
+	<div class="user-info">
+		<div 
+		class="avatar"
+		[ngStyle]="{background: 'url(' + user.avatar + ')' + 'center/cover no-repeat'}"
+		alt=""
+		>			
+		</div>
+		<div class="user-data">
+			<div class="user-name">
+				<span>{{ user.first_name }} </span>
+				<span>{{ user.last_name }}</span>
+			</div>
+			
+			<span>{{ user.country }}</span>
+		</div>
+		
+	</div>
+	
+	<div class="points">
+		<div>{{  user.rank.points }}</div>
+		<div class="rates">
+			<span><i class="fas fa-star"></i></span>
+			<span><i class="fas fa-star"></i></span>
+			<span><i class="fas fa-star"></i></span>
+			<span>points</span>
+		</div>
+	</div>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notification } from '../../../../interfaces/Notification';
-import { NavbarService } from "../../services/navbar.service";
+import { NavbarService } from '../../services/navbar.service';
 import { MessageService } from 'primeng/api';
 
 @Component({
@@ -25,7 +25,7 @@ export class NotificationsListComponent implements OnInit {
         this.messageService.add({
           severity: 'error',
           summary: 'Notifications load error',
-          detail: err.error.message,
+          // detail: err.error.message,
         });
       });
 	}

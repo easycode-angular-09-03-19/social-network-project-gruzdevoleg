@@ -1,5 +1,13 @@
+<input
+		type="file"
+		*ngIf="isCurrentUser"
+		class="upload-photos"
+		(change)="loadPhotos($event.target)"
+		value="Upload photo"
+		multiple
+>
 <ul class="selfies-list row">
-	<li *ngFor="let image of images" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+	<li *ngFor="let image of images" class="col-md-4 col-sm-6 col-12">
 		<app-picture-preview [img]="image"></app-picture-preview>
 	</li>
 </ul>

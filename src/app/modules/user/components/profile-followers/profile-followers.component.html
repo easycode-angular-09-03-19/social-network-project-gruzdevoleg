@@ -1,0 +1,5 @@
+<ul class="followers-list row">
+  <li *ngFor="let item of followers?.users" class="col-md-4 col-sm-6 col-12">
+    <app-followeruser-preview [followerUser]="item"></app-followeruser-preview>
+  </li>
+</ul>

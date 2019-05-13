@@ -45,6 +45,10 @@
 	padding-top: 15px;
 }
 
+.header-row--right a {
+	margin-right: 15px;
+}
+
 .header-row--right i::before {
 		color: #fff;
 }

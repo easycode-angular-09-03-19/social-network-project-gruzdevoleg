@@ -1,0 +1,18 @@
+<div class="user-preview">
+  <div class="user-cover">
+    <img src="{{ followerUser?.cover }}" alt="">
+    <div class="user-avatar">
+      <img src="{{ followerUser?.avatar }}" alt="">
+    </div>
+  </div>
+  <div class="user-data">
+    <span>{{ followerUser?.full_name }}</span>
+    <span>{{ followerUser?.city }}</span>
+    <button
+        type="button"
+        class="follow-button"
+        (click)="onClickHandler($event)"
+
+    >{{ buttonInnerText }}</button>
+  </div>
+</div>

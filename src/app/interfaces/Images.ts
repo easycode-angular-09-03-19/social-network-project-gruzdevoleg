@@ -1,5 +1,15 @@
 
 export interface Images {
   counts: string;
-  images: object;
+  images: [
+      {
+        create_date: string,
+        likes: [],
+        views: [],
+        glories: [],
+        _id: string,
+        url: string
+
+      }
+      ];
 }

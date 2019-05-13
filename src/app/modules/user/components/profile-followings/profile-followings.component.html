@@ -1,0 +1,8 @@
+<ul class="followings-list row">
+  <li *ngFor="let item of followings?.users" class="col-md-4 col-sm-6 col-12">
+    <app-followinguser-preview
+            [user]="item"
+            (delFollowUser)="getFollowings()"
+    ></app-followinguser-preview>
+  </li>
+</ul>

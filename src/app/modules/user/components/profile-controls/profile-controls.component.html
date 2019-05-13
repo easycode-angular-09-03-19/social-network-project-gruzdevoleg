@@ -2,23 +2,24 @@
 	<div class="user-info">
 		<div 
 		class="avatar"
-		[ngStyle]="{background: 'url(' + user.avatar + ')' + 'center/cover no-repeat'}"
+		[ngStyle]="{background: 'url(' + user?.avatar + ')' + 'center/cover no-repeat'}"
 		alt=""
 		>			
 		</div>
 		<div class="user-data">
 			<div class="user-name">
-				<span>{{ user.first_name }} </span>
-				<span>{{ user.last_name }}</span>
+				<span>{{ user?.first_name }} </span>
+				<span>{{ user?.last_name }}</span>
 			</div>
 			
-			<span>{{ user.country }}</span>
+			<span>{{ user?.country }}</span>
+
 		</div>
 		
 	</div>
 	
 	<div class="points">
-		<div>{{  user.rank.points }}</div>
+		<div>{{  user?.rank?.points }}</div>
 		<div class="rates">
 			<span><i class="fas fa-star"></i></span>
 			<span><i class="fas fa-star"></i></span>
@@ -26,4 +27,29 @@
 			<span>points</span>
 		</div>
 	</div>
+
+
+
+	<nav *ngIf="user" class="tabs">
+		<ul class="tab-controls">
+			<li *ngFor="let item of tabList">
+
+
+				<a href="#"
+				[routerLink]="['/users', user._id]"
+				[queryParams]="{tab: item.tab}"
+				[ngClass]="{ active: (activeTab | async) === item.tab}"
+				>
+					<span class="count" *ngIf="user[item.prop]?.length>0; else ifZero;">{{ user[item.prop]?.length }}</span>
+					<ng-template #ifZero>
+						<span class="count">0</span>
+					</ng-template>
+
+					<span>{{ item.text }}</span>
+
+				</a>
+			</li>
+			
+		</ul>
+	</nav>
 </div>

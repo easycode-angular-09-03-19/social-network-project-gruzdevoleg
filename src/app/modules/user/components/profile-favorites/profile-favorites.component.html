@@ -1,0 +1,5 @@
+<ul class="favorites-list row">
+  <li *ngFor="let item of favorites.images" class="col-md-4 col-sm-6 col-12">
+    <app-favorite-preview [photo]="item"></app-favorite-preview>
+  </li>
+</ul>

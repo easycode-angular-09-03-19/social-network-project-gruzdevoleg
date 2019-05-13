@@ -16,10 +16,10 @@ export interface User {
   email_on_new_challenges_once_week?: boolean;
   email_on_new_followers?: boolean;
   email_weekly_articles?: boolean;
-  favourites?: object;
+  favourites?: string[];
   first_name?: string;
-  followers?: object;
-  followings?: object;
+  followers?: object[];
+  followings?: object[];
   full_name?: string;
   gender_orientation?: string;
   glories?: object;
@@ -28,7 +28,7 @@ export interface User {
   is_deleted?: boolean;
   last_login_date?: string;
   last_name?: string;
-  my_images?: object;
+  my_images?: object[];
   nickname?: string;
   paypal_id?: string;
   phone?: string;

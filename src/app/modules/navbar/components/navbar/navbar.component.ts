@@ -31,6 +31,7 @@ export class NavbarComponent implements OnInit {
       	});
 
         this.currentUser.userWatcher.subscribe(({ avatar, _id }) => {
+
           if (_id) {
             this.userAvatar = avatar;
             this.userId = _id;

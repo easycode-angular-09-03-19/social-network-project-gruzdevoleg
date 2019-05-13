@@ -7,7 +7,7 @@
 }
 
 .profile-controls {
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -62,5 +62,52 @@
 .rates span {
 	display: inline;
 	margin-right: 8px;
+	color: #FFDB00;
+}
+
+.tabs {
+	height: 100%;
+}
+
+.tab-controls {
+	display: flex;
+	height: 100%;
+}
+.tab-controls li {
+
+	height: 100%;
+	padding: 0 20px;
+
+
+}
+
+
+.tab-controls li span{
+	display: block;
+	color: #000;
+
+
+}
+
+.tab-controls li a {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	outline: none;
+}
+
+.tab-controls li a:hover {
+	text-decoration: none;
+}
+
+.tab-controls li span:first-child {
+
+	margin-bottom: 10px;
+
+
+}
+
+.tab-controls li a.active span {
 	color: #FFDB00;
 }

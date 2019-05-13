@@ -1,0 +1,10 @@
+.img__item {
+    display: block;
+
+
+}
+
+.img__item img {
+    display: block;
+    width: 100%;
+}
